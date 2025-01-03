@@ -1,0 +1,109 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f9f9f9;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+  
+  .container {
+    width: 90%; /* Adjusted for smaller screens */
+    max-width: 400px; /* Ensure it doesn't exceed 400px */
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    padding: 20px;
+  }
+  
+  header {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  h1 {
+    color: #333;
+  }
+  
+  .hidden {
+    display: none;
+  }
+  
+  input {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+  }
+  
+  button {
+    width: 100%;
+    padding: 10px;
+    background-color: rgb(83, 53, 205);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  button:hover {
+    background-color:  rgb(119, 101, 191);
+  }
+  
+  ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  ul li {
+    background: #f1f1f1;
+    margin: 5px 0;
+    padding: 10px;
+    border-radius: 5px;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    body {
+      padding: 20px; /* Add padding to prevent overlap on small devices */
+      height: auto; /* Allow height to adjust dynamically */
+    }
+  
+    .container {
+      width: 100%;
+      padding: 15px; /* Reduce padding on smaller screens */
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow for smaller screens */
+    }
+  
+    input, button {
+      padding: 8px; /* Reduce padding for smaller input and buttons */
+      font-size: 14px; /* Adjust font size */
+    }
+  
+    ul li {
+      padding: 8px; /* Reduce padding for task items */
+      font-size: 14px; /* Adjust font size for tasks */
+    }
+  }
+  
+  @media (max-width: 480px) {
+    header {
+      margin-bottom: 10px; /* Reduce margin for smaller headers */
+    }
+  
+    h1 {
+      font-size: 20px; /* Smaller header font size */
+    }
+  
+    input, button {
+      font-size: 12px; /* Further reduce font size for smaller screens */
+    }
+  
+    ul li {
+      font-size: 12px; /* Smaller font size for task items */
+    }
+  }
+  

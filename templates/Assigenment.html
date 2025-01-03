@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Assignment Page</title>
+  <link rel="stylesheet" href="../static/css/Assigenment.css">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>Assignment Page</h1>
+    </header>
+
+    <div class="login-section" id="login-section">
+      <h2>Login</h2>
+      <input type="text" id="username" placeholder="Enter your username" />
+      <button id="login-btn">Login</button>
+    </div>
+
+    <div class="assignment-section hidden" id="assignment-section">
+      <h2>Welcome, <span id="user-name-display"></span>!</h2>
+      <h3>Add a Task</h3>
+      <input type="text" id="task-input" placeholder="Enter your task" />
+      <button id="add-task-btn">Add Task</button>
+      <h3>Your Tasks</h3>
+      <ul id="task-list"></ul>
+    </div>
+  </div>
+
+  <script >
+    // Elements
+const loginSection = document.getElementById('login-section');
+const assignmentSection = document.getElementById('assignment-section');
+const usernameInput = document.getElementById('username');
+const loginBtn = document.getElementById('login-btn');
+const userNameDisplay = document.getElementById('user-name-display');
+const taskInput = document.getElementById('task-input');
+const addTaskBtn = document.getElementById('add-task-btn');
+const taskList = document.getElementById('task-list');
+
+// Login functionality
+loginBtn.addEventListener('click', () => {
+  const username = usernameInput.value.trim();
+
+  if (username === '') {
+    alert('Please enter a valid username.');
+    return;
+  }
+
+  // Display username and switch sections
+  userNameDisplay.textContent = username;
+  loginSection.classList.add('hidden');
+  assignmentSection.classList.remove('hidden');
+});
+
+// Add task functionality
+addTaskBtn.addEventListener('click', () => {
+  const task = taskInput.value.trim();
+
+  if (task === '') {
+    alert('Please enter a valid task.');
+    return;
+  }
+
+  // Create task element and append to the task list
+  const taskItem = document.createElement('li');
+  taskItem.textContent = task;
+  taskList.appendChild(taskItem);
+
+  // Clear the input field
+  taskInput.value = '';
+});
+
+  </script>
+</body>
+</html>
